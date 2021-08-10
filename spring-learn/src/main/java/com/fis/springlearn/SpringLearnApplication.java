@@ -22,11 +22,22 @@ public class SpringLearnApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringLearnApplication.class, args);
 		displayDate();
+		displayCountry();
 	}
-	static void displayDate()  {
+	
+	static void displayCountry()
+	{
+		ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
+		Country country = context.getBean("country", Country.class);
+		Country anotherCountry = context.getBean("country", Country.class);
+		LOGGER.debug("Country : {}", country.toString());
+		LOGGER.debug("Country : {}", anotherCountry.toString());
+
+	}
+public static void displayDate()  {
 		LOGGER.info("START");
 		ApplicationContext context = new ClassPathXmlApplicationContext("date-format.xml");
-		SimpleDateFormat format = context.getBean("dateFormat", SimpleDateFormat.class);
+		SimpleDateFormat format = context.getBean("dateFormat1", SimpleDateFormat.class);
 		try {
 			Date parseDate = format.parse("31/12/2018");
 //			System.out.println(parseDate);
