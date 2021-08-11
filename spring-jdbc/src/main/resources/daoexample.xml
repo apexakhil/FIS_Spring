@@ -20,7 +20,7 @@
 			<props>
 				<prop key="url">jdbc:mysql://localhost:3306/test</prop>
 				<prop key="user">root</prop>
-				<prop key="password">password</prop>
+				<prop key="password">Cloud@123$</prop>
 			</props>
 		</property>
 	</bean>
