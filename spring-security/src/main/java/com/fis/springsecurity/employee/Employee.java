@@ -1,4 +1,4 @@
-package com.fis.springjpa.employee;
+package com.fis.springsecurity.employee;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
