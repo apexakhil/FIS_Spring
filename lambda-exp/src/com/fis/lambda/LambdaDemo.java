@@ -27,7 +27,7 @@ public class LambdaDemo {
 //					}
 //				};
 		
-		A obj = (name) -> System.out.println("Hello "+name); //lambda exp
+		A obj = (name) -> System.out.println("Hello "+name); //lambda exp can be uses to define the methods in interface
 		
 		obj.show("Rutvik");
 	}
